@@ -4,11 +4,13 @@ import Footer from './components/Footer'
 
 export const Layout = ({ children }) => {
   return (
-    <>
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <Navbar />
-      {children}
+      <main style={{ flex: 1 }}>
+        {children}
+      </main>
       <Footer />
-    </>
+    </div>
   )
 }
 
